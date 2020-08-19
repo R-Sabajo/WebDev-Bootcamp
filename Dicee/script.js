@@ -1,5 +1,8 @@
-// Select the state Text Element
-let stateText = document.getElementById('state');
+// Select the stateText element and playertext elements
+let stateText = document.querySelector('#state');
+let player1 = document.querySelector('#player1');
+let player2 = document.querySelector('#player2');
+console.log(player1);
 
 // Select 'Roll the Dice!' Button
 let rollButton = document.getElementById('roll');
@@ -17,13 +20,19 @@ const rollDice = () => {
     .querySelector('.die2')
     .setAttribute('src', './images/dice' + randomNumber2 + 'NEW.png');
 
-  // Make if statements to determine the Winner or draw text!
+  // Make if statements to determine result text!
   if (randomNumber1 > randomNumber2) {
     stateText.innerHTML = 'Player 1 wins!';
+    player1.classList.add('win');
+    player2.classList.remove('win');
   } else if (randomNumber1 === randomNumber2) {
     stateText.innerHTML = 'Draw!';
+    player1.classList.add('win');
+    player2.classList.add('win');
   } else {
     stateText.innerHTML = 'Player 2 wins!';
+    player2.classList.add('win');
+    player1.classList.remove('win');
   }
 };
 

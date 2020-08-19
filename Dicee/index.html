@@ -10,27 +10,25 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="container">
     <header>
       <hr />
       <h1 class="title">Dicee Game</h1>
     </header>
-    <main class="container">
+    <main class="inner-container">
       <h2 id="state">Do you feel Lucky?</h2>
       <div class="playerbox-container">
-        <div class="price1"></div>
         <div class="playerbox">
-          <h3>Player 1</h3>
+          <h3 id="player1">Player 1</h3>
           <img src="./images/dice6NEW.png" class="dice die1" />
         </div>
         <div class="playerbox">
-          <h3>Player 2</h3>
+          <h3 id="player2">Player 2</h3>
           <img src="./images/dice6NEW.png" class="dice die2" />
-          <div class="price2"></div>
         </div>
       </div>
-      <button id="roll">Roll the Dice!</button>
     </main>
+    <button id="roll">Roll the Dice!</button>
     <footer class="footer">created by Rama Sabajo &copy 2020</footer>
     <script src="script.js"></script>
   </body>
