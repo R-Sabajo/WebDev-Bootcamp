@@ -93,8 +93,8 @@ hr {
 
 .dice {
   width: 150px;
-  border: 2px double var(--light-color);
-  border-radius: 20px;
+  border: 2px solid var(--light-color);
+  border-radius: 25px;
   box-shadow: 0 0 15px;
 }
 
@@ -128,7 +128,6 @@ hr {
     var(--dice-color) 90%
   );
   box-shadow: 0 2px 15px black;
-  color: var(--light-color-bright);
   transform: scale(1.02);
   transition: transform 100ms ease-in-out;
 }
