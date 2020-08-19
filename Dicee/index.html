@@ -4,8 +4,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dicee</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;515;600;700&family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,200;0,400;0,500;0,700;0,900;1,200;1,400;1,500;1,700;1,900&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Dicee Game</h1>
+    <header>
+      <hr />
+      <h1 class="title">Dicee Game</h1>
+    </header>
+    <main class="container">
+      <h2 id="state">Do you feel Lucky?</h2>
+      <div class="playerbox-container">
+        <div class="price1"></div>
+        <div class="playerbox">
+          <h3>Player 1</h3>
+          <img src="./images/dice6NEW.png" class="dice die1" />
+        </div>
+        <div class="playerbox">
+          <h3>Player 2</h3>
+          <img src="./images/dice6NEW.png" class="dice die2" />
+          <div class="price2"></div>
+        </div>
+      </div>
+      <button id="roll">Roll the Dice!</button>
+    </main>
+    <footer class="footer">created by Rama Sabajo &copy 2020</footer>
+    <script src="script.js"></script>
   </body>
 </html>

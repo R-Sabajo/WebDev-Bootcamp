@@ -1,0 +1,164 @@
+:root {
+  --DancingScript: 'Dancing Script', cursive;
+  --Comfortaa: 'Comfortaa', cursive;
+  --Montserrat: 'Montserrat', sans-serif;
+  --Pacifico: 'Pacifico', cursive;
+
+  --dice-color: #9c060c;
+  --back-color: #420722;
+  --text-color: #28464b;
+  --light-color: #bcb382;
+  --light-color-bright: hsl(51, 30%, 70%);
+}
+
+/* html Elements */
+
+body {
+  background-color: var(--back-color);
+  color: var(--light-color);
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+  height: 90vh;
+}
+
+header {
+  position: relative;
+  height: 150px;
+  width: 600px;
+}
+
+hr {
+  width: 500px;
+  border: 0;
+  border-top: 1px solid var(--light-color);
+  position: absolute;
+  left: 50px;
+  top: 70px;
+}
+
+/* Title */
+
+.title {
+  background-color: var(--back-color);
+  font-family: var(--DancingScript);
+  padding: 10px 20px;
+  font-size: 3rem;
+  position: absolute;
+  margin: 0;
+  left: 170px;
+  top: 35px;
+  text-shadow: 0px -7px 10px black;
+}
+
+/* State of Play */
+
+#state {
+  color: var(--dice-color);
+  font-family: var(--Comfortaa);
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 0.2rem;
+  text-shadow: 0 0 20px;
+  margin-top: 130px;
+}
+
+/* containers */
+
+.container {
+  width: 90%;
+}
+
+.playerbox-container {
+  display: flex;
+  font-family: var(--Comfortaa);
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  text-shadow: 0px -5px 7px black;
+  justify-content: center;
+}
+
+.playerbox {
+  width: 200px;
+  height: 200px;
+  margin: 0 30px;
+}
+
+/* Dice */
+
+.dice {
+  width: 150px;
+  border: 2px double var(--light-color);
+  border-radius: 20px;
+  box-shadow: 0 0 15px;
+}
+
+/* Button */
+
+#roll {
+  background: linear-gradient(
+    var(--back-color),
+    var(--light-color) 10%,
+    var(--back-color) 30%,
+    var(--dice-color) 90%
+  );
+  border: 2px solid var(--light-color);
+  border-radius: 25px;
+  box-shadow: 0 2px 10px black;
+  color: var(--light-color);
+  font-size: 2.5rem;
+  font-family: var(--Pacifico);
+  font-weight: 400;
+  margin-top: 100px;
+  text-shadow: 0 0 5px black;
+  transition: transform 200ms ease-in-out;
+  width: 450px;
+}
+
+#roll:hover {
+  background: linear-gradient(
+    var(--back-color),
+    var(--light-color) 10%,
+    var(--back-color) 25%,
+    var(--dice-color) 90%
+  );
+  box-shadow: 0 2px 15px black;
+  color: var(--light-color-bright);
+  transform: scale(1.02);
+  transition: transform 100ms ease-in-out;
+}
+
+#roll:active {
+  background: linear-gradient(
+    var(--back-color),
+    var(--light-color) 10%,
+    var(--back-color) 30%,
+    var(--dice-color) 90%
+  );
+  box-shadow: 0 1px 1px black;
+  color: var(--light-color-bright);
+  text-shadow: 0 0 5px;
+  transform: scale(1);
+  transition: transform 50ms ease-in-out;
+  outline: none;
+}
+#roll:focus {
+  outline: none;
+}
+
+/* Footer */
+
+.footer {
+  font-family: var(--Montserrat);
+  font-size: 0.8rem;
+  position: absolute;
+  transform: rotate(-90deg);
+  left: -80px;
+  top: 570px;
+  text-shadow: 0px -7px 9px black;
+}
