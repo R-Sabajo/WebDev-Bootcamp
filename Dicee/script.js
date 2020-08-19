@@ -14,10 +14,10 @@ const rollDice = () => {
 
   // use random numbers to set img src attribute to dice images
   document
-    .querySelector('.die1')
+    .querySelectorAll('img')[0]
     .setAttribute('src', './images/dice' + randomNumber1 + 'NEW.png');
   document
-    .querySelector('.die2')
+    .querySelectorAll('img')[1]
     .setAttribute('src', './images/dice' + randomNumber2 + 'NEW.png');
 
   // Make if statements to determine result text!
@@ -36,7 +36,7 @@ const rollDice = () => {
   }
 };
 
-// Add an eventlistener for a mouseclick to run the rollDice function
+// Add an eventlistener for mouseclick to run the rollDice function
 rollButton.addEventListener('click', () => {
   rollDice();
 });
