@@ -27,7 +27,7 @@ body {
   color: var(--light-color);
   box-sizing: border-box;
   margin: 0;
-  height: 100%;
+  height: 100vh;
 }
 
 .container-fluid {
@@ -40,7 +40,7 @@ body {
 hr {
   position: relative;
   top: -50px;
-  width: 50%;
+  width: 500px;
   border: 0;
   border-top: 1px solid var(--light-color);
 }
@@ -153,6 +153,7 @@ hr {
 /* Footer */
 
 .footer {
+  opacity: 0.6;
   font-family: var(--Montserrat);
   font-size: 0.8rem;
   transform: rotate(-90deg);
@@ -166,15 +167,15 @@ hr {
 
 @media (max-width: 600px) {
   hr {
-    width: 70%;
+    width: 80%;
     border: 0;
     border-top: 1px solid var(--light-color);
   }
 
   #state {
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 0.2rem;
-    margin: 15% 0;
+    margin: 5% 0 15%;
   }
 
   .dice {
