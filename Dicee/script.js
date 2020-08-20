@@ -7,7 +7,7 @@ console.log(player1);
 // Select 'Roll the Dice!' Button
 let rollButton = document.getElementById('roll');
 
-const rollDice = () => {
+const playDicee = () => {
   //  generate two random numbers
   let randomNumber1 = Math.floor(Math.random() * 6 + 1);
   let randomNumber2 = Math.floor(Math.random() * 6 + 1);
@@ -38,5 +38,5 @@ const rollDice = () => {
 
 // Add an eventlistener for mouseclick to run the rollDice function
 rollButton.addEventListener('click', () => {
-  rollDice();
+  playDicee();
 });
