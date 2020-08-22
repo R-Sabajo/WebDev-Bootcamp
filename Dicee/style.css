@@ -28,13 +28,11 @@ body {
   box-sizing: border-box;
   margin: 0;
   height: 100vh;
+  /* overflow-x: hidden; */
 }
 
-.container-fluid {
-  text-align: center;
-  padding: 3% 0 5%;
-  width: 90%;
-  height: 100%;
+header {
+  margin-top: 1%;
 }
 
 hr {
@@ -43,6 +41,23 @@ hr {
   width: 500px;
   border: 0;
   border-top: 1px solid var(--light-color);
+}
+
+/* containers */
+
+.container-fluid {
+  text-align: center;
+  padding: 3% 0 5%;
+  width: 90%;
+  height: 100%;
+}
+
+.playerbox-container {
+  font-family: var(--Comfortaa);
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 0.1rem;
+  text-shadow: 0px -5px 7px black;
 }
 
 /* Title */
@@ -72,16 +87,6 @@ hr {
   margin: 3% 0;
 }
 
-/* containers */
-
-.playerbox-container {
-  font-family: var(--Comfortaa);
-  font-size: 1.3rem;
-  font-weight: 900;
-  letter-spacing: 0.1rem;
-  text-shadow: 0px -5px 7px black;
-}
-
 /* Dice */
 
 .dice {
@@ -89,6 +94,15 @@ hr {
   border: 2px solid var(--light-color);
   border-radius: 25px;
   box-shadow: 0 0 15px;
+}
+
+.box1 h3,
+.box1 img {
+  margin-left: 33%;
+}
+.box2 h3,
+.box2 img {
+  margin-right: 33%;
 }
 
 /* Button */
@@ -109,7 +123,7 @@ hr {
   font-weight: 400;
   text-shadow: 0 0 5px black;
   transition: transform 200ms ease-in-out;
-  margin: 5% 0 0;
+  margin: 7% 0 5%;
   width: 75%;
 }
 
@@ -166,6 +180,10 @@ hr {
 /* Media Query for mobile */
 
 @media (max-width: 600px) {
+  header {
+    margin-top: 7%;
+  }
+
   hr {
     width: 80%;
     border: 0;
