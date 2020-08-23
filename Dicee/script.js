@@ -6,6 +6,15 @@ console.log(player1);
 
 // Select 'Roll the Dice!' Button
 let rollButton = document.getElementById('roll');
+rollButton.classList.add('rollNow');
+
+const resetWinner = () => {
+  rollButton.classList.remove('rollNow');
+  stateText.classList.remove('win');
+  player1.classList.remove('win');
+  player2.classList.remove('win');
+  stateText.innerHTML = 'Do you feel Lucky?';
+};
 
 const rollDice = () => {
   //  generate two random numbers
@@ -19,8 +28,22 @@ const rollDice = () => {
   document
     .querySelectorAll('img')[1]
     .setAttribute('src', './images/dice' + randomNumber2 + 'NEW.png');
+};
 
-  // Make if statements to determine result text!
+const rollDiceAndStateWinner = () => {
+  let randomNumber1 = Math.floor(Math.random() * 6 + 1);
+  let randomNumber2 = Math.floor(Math.random() * 6 + 1);
+
+  document
+    .querySelectorAll('img')[0]
+    .setAttribute('src', './images/dice' + randomNumber1 + 'NEW.png');
+  document
+    .querySelectorAll('img')[1]
+    .setAttribute('src', './images/dice' + randomNumber2 + 'NEW.png');
+
+  // determine and animate result text!
+  stateText.classList.add('win');
+
   if (randomNumber1 > randomNumber2) {
     stateText.innerHTML = 'Player 1 wins!';
     player1.classList.add('win');
@@ -34,9 +57,25 @@ const rollDice = () => {
     player2.classList.add('win');
     player1.classList.remove('win');
   }
+
+  setTimeout(() => rollButton.classList.add('rollNow'), 3000);
 };
 
-// Add an eventlistener for mouseclick to run the rollDice function
+// Add an eventlistener for mouseclick to run the rollDice function. SEt a timeout out to simulate dice roll effect.
 rollButton.addEventListener('click', () => {
+  resetWinner();
   rollDice();
+  for (let i = 1; i < 10; i++) {
+    setTimeout(() => rollDice(), [i * 50]);
+  }
+  for (let i = 1; i < 20; i++) {
+    setTimeout(() => rollDice(), [i * 100]);
+  }
+
+  for (let i = 1; i < 20; i++) {
+    setTimeout(() => rollDice(), [i * 200]);
+  }
+  setTimeout(() => rollDice(), 3000);
+  setTimeout(() => rollDice(), 3500);
+  setTimeout(() => rollDiceAndStateWinner(), 4500);
 });
