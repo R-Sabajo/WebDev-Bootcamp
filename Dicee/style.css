@@ -28,7 +28,6 @@ body {
   box-sizing: border-box;
   margin: 0;
   height: 100vh;
-  /* overflow-x: hidden; */
 }
 
 header {
@@ -152,6 +151,7 @@ hr {
   transform: scale(1);
   transition: transform 50ms ease-in-out;
   outline: none;
+  animation: none;
 }
 #roll:focus {
   outline: none;
@@ -161,7 +161,30 @@ hr {
 
 .win {
   color: ghostwhite;
-  text-shadow: 0px 0px 30px ghostwhite;
+  animation: 500ms ease-in-out 5 forwards pulse;
+}
+
+/* Roll class to highlight Roll Button to start rolling */
+
+.rollNow {
+  color: var(--light-color-bright);
+  animation: 1000ms ease-in-out infinite pulse;
+}
+
+/* Animation to highlight result text, winning player and roll button */
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 20px;
+  }
+
+  50% {
+    text-shadow: 0 0 0;
+  }
+
+  100% {
+    text-shadow: 0 0 20px;
+  }
 }
 
 /* Footer */
