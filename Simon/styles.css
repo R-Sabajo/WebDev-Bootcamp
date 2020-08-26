@@ -1,20 +1,44 @@
 body {
   text-align: center;
-  background-color: #011F3F;
+  background-color: #011f3f;
+}
+
+.header {
+  height: 180px;
 }
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  5%;
-  color: #FEF2BF;
+  font-size: 2rem;
+  margin: 5%;
+  color: #fef2bf;
+  padding: 3% 3%;
+}
+
+.blink {
+  animation: linear blinking 1.5s infinite;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .container {
   display: block;
-  width: 50%;
+  width: 90%;
   margin: auto;
-
 }
 
 .btn {
@@ -24,6 +48,8 @@ body {
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+  box-shadow: 0 5px 20px black;
+  opacity: 0.5;
 }
 
 .game-over {
@@ -32,22 +58,41 @@ body {
 }
 
 .red {
-  background-color: red;
+  background: radial-gradient(hsl(0, 100%, 50%), hsl(0, 100%, 20%));
 }
 
 .green {
-  background-color: green;
+  background: radial-gradient(hsl(120, 100%, 25%), hsl(120, 100%, 10%));
 }
 
 .blue {
-  background-color: blue;
+  background: radial-gradient(hsl(240, 100%, 50%), hsl(240, 100%, 20%));
 }
 
 .yellow {
-  background-color: yellow;
+  background: radial-gradient(hsl(60, 100%, 50%), hsl(60, 100%, 20%));
 }
 
 .pressed {
   box-shadow: 0 0 20px white;
-  background-color: grey;
+  opacity: 1;
+  background: radial-gradient(20%, 50%);
+}
+
+@media (max-width: 600px) {
+  #level-title {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.8rem;
+    margin: 10% auto 5%;
+    padding: 10% 3%;
+    color: #fef2bf;
+  }
+
+  .btn {
+    margin: 20px;
+    height: 150px;
+    width: 150px;
+    border: 7px solid black;
+    border-radius: 20%;
+  }
 }
