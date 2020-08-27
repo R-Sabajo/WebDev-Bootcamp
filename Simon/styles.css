@@ -3,22 +3,22 @@ body {
   background-color: #011f3f;
   height: 100vh;
   display: grid;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 150px 1fr;
 }
-
-.container {
-  grid-row: 2 / 3;
-  display: block;
-  width: 95%;
-  margin: auto;
-}
-
-/* Header */
 
 .header {
   grid-row: 1 / 2;
   height: 180px;
 }
+
+.container {
+  grid-row: 2 / 3;
+  display: block;
+  width: 100%;
+  margin: 5% auto;
+}
+
+/* Header */
 
 #level-title {
   font-family: 'Press Start 2P', cursive;
@@ -106,8 +106,8 @@ body {
   }
   .btn {
     margin: 15px;
-    height: 200px;
-    width: 200px;
+    height: 230px;
+    width: 230px;
     border: 10px solid black;
     border-radius: 20%;
   }
