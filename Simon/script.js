@@ -46,22 +46,22 @@ function repeatSequence() {
     setTimeout(() => {
       $('.' + gamePattern[i]).addClass('pressed');
       playSound(gamePattern[i]);
-    }, i * 550 + 500);
+    }, i * 350 + 500);
     setTimeout(
       () => $('.' + gamePattern[i]).removeClass('pressed'),
-      i * 550 + 800
+      i * 350 + 800
     );
   }
 
   // Add the next color in the sequence after the existing pattern ends
   setTimeout(() => {
     nextSequence();
-  }, gamePattern.length * 550 + 550);
+  }, gamePattern.length * 350 + 550);
 
   // empty userClicked pattern Array
   setTimeout(() => {
     userClickedPattern = [];
-  }, gamePattern.length * 550 + 550);
+  }, gamePattern.length * 350 + 550);
 
   // update the level
   level++;
